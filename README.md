@@ -1,6 +1,6 @@
 # DeveloperHit
 
-![iOS](https://img.shields.io/badge/iOS-11-brightgreen.svg?style=flat) ![Swift](https://img.shields.io/badge/Swift-4-green.svg?style=flat) ![Go](https://img.shields.io/badge/Go-1.9-orange.svg?style=flat)
+![iOS](https://img.shields.io/badge/iOS-11-brightgreen.svg?style=flat) ![Swift](https://img.shields.io/badge/Swift-4-green.svg?style=flat) ![Go](https://img.shields.io/badge/Go-1.9-orange.svg?style=flat) ![Node](https://img.shields.io/badge/Node-8-blue.svg?style=flat)
 
 After exploring some Web APIs associated with the chosen topic, only a few websites provide friendly APIs, especially when an XML format data response is expected. Therefore we decided to build our own APIs by parsing HTML pages responded from target websites:
 
@@ -19,8 +19,6 @@ After exploring some Web APIs associated with the chosen topic, only a few websi
 
 The frontend will integrate lastest and hot information in a list for users. And I plan to implement it on  Web, iOS and Android platform.
 
-
-
 ## Backend
 
 ### GitHub
@@ -35,3 +33,20 @@ go build
 ```
 
 It will run in the ``8000`` port with the url  ``/github``.
+
+### Zhihu
+
+Repo: https://github.com/lisirrx/ZhihuApiBackend
+
+#### How to Run
+
+```shell
+npm install
+npm start
+```
+
+It will run in the ``3001`` port with the url  ``/topic``.
+
+## Frontend
+
+under construction...
