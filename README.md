@@ -1,6 +1,6 @@
-# Programming with Web API Proposal
+# DeveloperHit
 
-### *DeveloperHit*
+![iOS](https://img.shields.io/badge/iOS-11-brightgreen.svg?style=flat) ![Swift](https://img.shields.io/badge/Swift-4-green.svg?style=flat) ![Go](https://img.shields.io/badge/Go-1.9-orange.svg?style=flat)
 
 After exploring some Web APIs associated with the chosen topic, only a few websites provide friendly APIs, especially when an XML format data response is expected. Therefore we decided to build our own APIs by parsing HTML pages responded from target websites:
 
