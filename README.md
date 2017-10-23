@@ -28,6 +28,7 @@ The frontend will integrate lastest and hot information in a list for users. And
 #### How to Run
 
 ```shell
+go get github.com/zjzsliyang/go-trending
 cd DeveloperHit/Backend
 go build
 ./Backend

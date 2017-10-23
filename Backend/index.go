@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/andygrunwald/go-trending"
+	"github.com/zjzsliyang/go-trending"
 )
 
 type Developer struct {
