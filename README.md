@@ -1,8 +1,4 @@
-## Programming with Web API Proposal
-
-This is a GitHub-api repo.
-
-for Zhihu-api, please visit lisirrx's repo.
+# Programming with Web API Proposal
 
 ### *Programmer Hotspot*
 
@@ -22,3 +18,19 @@ After exploring some Web APIs associated with the chosen topic, only a few websi
   Zhihu may be the biggest Q&A community in China. We will write a backend with RESTful API, which providing some program-related topic content.
 
 The frontend will integrate lastest and hot information in a list for users. And I plan to implement it on  Web, iOS and Android platform.
+
+
+
+## Backend
+
+### GitHub
+
+#### How to Run
+
+```shell
+cd ProgrammerHotspot/Backend
+go build
+./Backend
+```
+
+It will run in the ``8000`` port with the url  ``/github``.
