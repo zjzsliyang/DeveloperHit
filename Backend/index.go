@@ -32,17 +32,21 @@ type Project struct {
 type Projects struct {
 	XMLName xml.Name  `xml:"projects"`
 	Version string    `xml:"version,attr"`
+	XsiUrl  string    `xml:"xmlns:xsi,attr"`
+	XmlUrl  string    `xml:"xsi:noNamespaceSchemaLocation,attr"`
 	Project []Project `xml:"project"`
 }
 
 func Trend(res http.ResponseWriter, req *http.Request) {
 	trend := trending.NewTrending()
+	xsiUrl := "http://www.w3.org/2001/XMLSchema-instance"
+	xmlUrl := "https://github.com/zjzsliyang/DeveloperHit/raw/master/Backend/github.xsd"
 
 	projects, err := trend.GetProjects(trending.TimeToday, "")
 	if err != nil {
 		log.Fatal(err)
 	}
-	dataProjects := &Projects{Version: "1"}
+	dataProjects := &Projects{Version: "1", XsiUrl: xsiUrl, XmlUrl: xmlUrl}
 	for _, project := range projects {
 		dataProject := Project{Name: project.Name, Owner: project.Owner, RepositoryName: project.RepositoryName,
 			Description: project.Description, Language: project.Language, Stars: project.Stars, URL: project.URL.String(),
