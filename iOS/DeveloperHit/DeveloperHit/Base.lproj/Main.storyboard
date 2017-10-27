@@ -28,7 +28,7 @@
         <!--GitHub-->
         <scene sceneID="LY8-Tz-JNI">
             <objects>
-                <viewController title="GitHub" id="iAi-RL-xFn" sceneMemberID="viewController">
+                <viewController title="GitHub" id="iAi-RL-xFn" customClass="GitHubViewController" customModule="DeveloperHit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HA7-vK-leG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
