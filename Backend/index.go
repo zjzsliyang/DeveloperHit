@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/xml"
-	"fmt"
 	"log"
 	"net/http"
 
@@ -49,8 +48,17 @@ func Trend(res http.ResponseWriter, req *http.Request) {
 	dataProjects := &Projects{Version: "1", XsiUrl: xsiUrl, XmlUrl: xmlUrl}
 	for _, project := range projects {
 		dataProject := Project{Name: project.Name, Owner: project.Owner, RepositoryName: project.RepositoryName,
-			Description: project.Description, Language: project.Language, Stars: project.Stars, URL: project.URL.String(),
-			ContributorURL: project.ContributorURL.String()}
+			Description: project.Description, Language: project.Language, Stars: project.Stars}
+		if project.URL == nil {
+			dataProject.URL = ""
+		} else {
+			dataProject.URL = project.URL.String()
+		}
+		if project.ContributorURL == nil {
+			dataProject.ContributorURL = ""
+		} else {
+			dataProject.ContributorURL = project.ContributorURL.String()
+		}
 		for _, contributor := range project.Contributor {
 			dataDeveloper := Developer{ID: contributor.ID, DisplayName: contributor.DisplayName, FullName: contributor.FullName,
 				URL: contributor.URL.String(), Avatar: contributor.Avatar.String()}
@@ -61,7 +69,7 @@ func Trend(res http.ResponseWriter, req *http.Request) {
 	res.Write([]byte(xml.Header))
 	output, err := xml.MarshalIndent(dataProjects, "  ", "    ")
 	if err != nil {
-		fmt.Println("err: %v", err)
+		log.Fatal(err)
 	}
 	res.Write(output)
 }
