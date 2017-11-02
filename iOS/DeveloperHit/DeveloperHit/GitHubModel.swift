@@ -9,40 +9,40 @@
 import Foundation
 
 public class Developer {
-  public var id: Int
-  public var displayName: String
-  public var fullName: String
-  public var url: String
-  public var avatar: String
+  public var id: Int? = nil
+  public var displayName: String? = nil
+  public var fullName: String? = nil
+  public var devUrl: String? = nil
+  public var avatar: String? = nil
   
-  init(id: Int, displayName: String, fullName: String, url: String,
+  init(id: Int, displayName: String, fullName: String, devUrl: String,
        avatar: String) {
     self.id = id
     self.displayName = displayName
     self.fullName = fullName
-    self.url = url
+    self.devUrl = devUrl
     self.avatar = avatar
   }
 }
 
 public class Project {
-  public var name: String
-  public var owner: String
-  public var repositoryName: String
-  public var description: String
-  public var language: String
-  public var stars: Int
-  public var url: String
-  public var contributorUrl: String
-  public var contributor: [Developer]
+  public var name: String? = nil
+  public var owner: String? = nil
+  public var repositoryName: String? = nil
+  public var descriptions: String? = nil
+  public var language: String? = nil
+  public var stars: Int? = nil
+  public var url: String? = nil
+  public var contributorUrl: String? = nil
+  public var contributor: [Developer]? = nil
   
-  init(name: String, owner: String, repositoryName: String, description: String,
+  init(name: String, owner: String, repositoryName: String, descriptions: String,
        language: String, stars: Int, url: String, contributorUrl: String,
        contributor: [Developer]) {
     self.name = name
     self.owner = owner
     self.repositoryName = repositoryName
-    self.description = description
+    self.descriptions = descriptions
     self.language = language
     self.stars = stars
     self.url = url
