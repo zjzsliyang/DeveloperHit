@@ -12,7 +12,7 @@ type Developer struct {
 	ID          int    `xml:"id"`
 	DisplayName string `xml:"display_name"`
 	FullName    string `xml:"full_name"`
-	URL         string `xml:"url"`
+	URL         string `xml:"dev_url"`
 	Avatar      string `xml:"avator"`
 }
 
@@ -20,7 +20,7 @@ type Project struct {
 	Name           string      `xml:"name"`
 	Owner          string      `xml:"owner"`
 	RepositoryName string      `xml:"repository_name"`
-	Description    string      `xml:"description"`
+	Description    string      `xml:"descriptions"`
 	Language       string      `xml:"language"`
 	Stars          int         `xml:"stars"`
 	URL            string      `xml:"url"`

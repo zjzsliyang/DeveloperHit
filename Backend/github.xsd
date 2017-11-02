@@ -7,7 +7,7 @@
                 <xs:element name="id" type="xs:integer"/>
                 <xs:element name="display_name" type="xs:string"/>
                 <xs:element name="full_name" type="xs:string"/>
-                <xs:element name="url" type="xs:string"/>
+                <xs:element name="dev_url" type="xs:string"/>
                 <xs:element name="avator" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
@@ -19,7 +19,7 @@
                 <xs:element name="name" type="xs:string"/>
                 <xs:element name="owner" type="xs:string"/>
                 <xs:element name="repository_name" type="xs:string"/>
-                <xs:element name="description" type="xs:string"/>
+                <xs:element name="descriptions" type="xs:string"/>
                 <xs:element name="language" type="xs:string"/>
                 <xs:element name="stars" type="xs:integer"/>
                 <xs:element name="url" type="xs:string"/>
