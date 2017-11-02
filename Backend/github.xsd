@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <xs:element name="developer">
+    <xs:element name="contributor">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="id" type="xs:integer"/>
@@ -24,7 +24,7 @@
                 <xs:element name="stars" type="xs:integer"/>
                 <xs:element name="url" type="xs:string"/>
                 <xs:element name="contributor_url" type="xs:string"/>
-                <xs:element ref="developer" maxOccurs="unbounded"/>
+                <xs:element ref="contributor" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

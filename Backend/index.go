@@ -25,7 +25,7 @@ type Project struct {
 	Stars          int         `xml:"stars"`
 	URL            string      `xml:"url"`
 	ContributorURL string      `xml:"contributor_url"`
-	Contributor    []Developer `xml:"developer"`
+	Contributor    []Developer `xml:"contributor"`
 }
 
 type Projects struct {
