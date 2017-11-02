@@ -12,22 +12,22 @@ import UIKit
   
   var eleName = String()
   var projects: [Project] = []
-  var developers: [Developer] = []
+  var contributors: [Developer] = []
   
   dynamic var name: String? = nil
   dynamic var owner: String? = nil
-  dynamic var repositoryName: String? = nil
+  dynamic var repository_name: String? = nil
   dynamic var descriptions: String? = nil
   dynamic var language: String? = nil
-  dynamic var stars: Int? = nil
+  dynamic var stars: String? = nil
   dynamic var url: String? = nil
-  dynamic var contributorUrl: String? = nil
+  dynamic var contributor_url: String? = nil
   dynamic var contributor: [Developer]? = nil
   
-  dynamic var id: Int? = nil
-  dynamic var displayName: String? = nil
-  dynamic var fullName: String? = nil
-  dynamic var devUrl: String? = nil
+  dynamic var id: String? = nil
+  dynamic var display_name: String? = nil
+  dynamic var full_name: String? = nil
+  dynamic var dev_url: String? = nil
   dynamic var avatar: String? = nil
   
   override func viewDidLoad() {
@@ -46,32 +46,32 @@ import UIKit
     if elementName == "project" {
       name = String()
       owner = String()
-      repositoryName = String()
+      repository_name = String()
       descriptions = String()
       language = String()
-      stars = Int()
+      stars = String()
       url = String()
-      contributorUrl = String()
+      contributor_url = String()
       contributor = []
     }
-    if elementName == "developer" {
-      id = Int()
-      displayName = String()
-      fullName = String()
-      devUrl = String()
+    if elementName == "contributor" {
+      id = String()
+      display_name = String()
+      full_name = String()
+      dev_url = String()
       avatar = String()
     }
   }
   
   func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
     if elementName == "project" {
-      let project = Project(name: name!, owner: owner!, repositoryName: repositoryName!, descriptions: descriptions!, language: language!, stars: stars!, url: url!, contributorUrl: contributorUrl!, contributor: developers)
+      let project = Project(name: name!, owner: owner!, repositoryName: repository_name!, descriptions: descriptions!, language: language!, stars: Int(stars!)!, url: url!, contributorUrl: contributor_url!, contributor: contributors)
       projects.append(project)
-      developers = []
+      contributors = []
     }
-    if elementName == "developer" {
-      let developer = Developer(id: id!, displayName: displayName!, fullName: fullName!, devUrl: devUrl!, avatar: avatar!)
-      developers.append(developer)
+    if elementName == "contributor" {
+      let contributor = Developer(id: Int(id!)!, displayName: display_name!, fullName: full_name!, devUrl: dev_url!, avatar: avatar!)
+      contributors.append(contributor)
     }
   }
   
