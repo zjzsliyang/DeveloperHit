@@ -21,12 +21,12 @@ The frontend will integrate lastest and hot information in a list for users. And
 
 ## Backend
 
-| Content | URL                              |
-| ------- | -------------------------------- |
-| GitHub  | http://115.159.1.222:8000/github |
-| Zhihu   | http://115.159.1.222:3001/topic  |
-|         |                                  |
-|         |                                  |
+| Content | URL                                      |
+| ------- | ---------------------------------------- |
+| GitHub  | http://115.159.1.222:8000/github         |
+| Zhihu   | http://115.159.1.222:3001/topic          |
+| V2EX    | https://www.v2ex.com/api/topics/hot.json |
+| Gank    | http://gank.io/api/day/2015/08/07        |
 
 ### GitHub
 
