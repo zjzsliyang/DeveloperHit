@@ -38,7 +38,10 @@ class ProjectTableViewCell: UITableViewCell {
     bgView.backgroundColor = .white
     contentView.addSubview(bgView)
     
+<<<<<<< Updated upstream
     
+=======
+>>>>>>> Stashed changes
     rankLabel = UILabel(frame: CGRect(x: preWidth, y: orginY, width: rankWidth, height: repositoryLabelHeight))
     bgView.addSubview(rankLabel!)
     
@@ -54,7 +57,11 @@ class ProjectTableViewCell: UITableViewCell {
     titleImageView = UIImageView(frame: CGRect(x: preWidth + (rankWidth - imageViewWidth) / 2, y: orginY + 30 + heightSpace, width: imageViewWidth, height: imageViewWidth))
     bgView.addSubview(titleImageView!)
     
+<<<<<<< Updated upstream
     starLabel = UILabel(frame: CGRect(x: preWidth + rankWidth + sufRankWidth + repositoryLabelWidth, y: orginY, width: 65, height: repositoryLabelHeight))
+=======
+    starLabel = UILabel(frame: CGRect(x: preWidth + rankWidth + sufRankWidth + repositoryLabelWidth, y: orginY, width: 75, height: repositoryLabelHeight))
+>>>>>>> Stashed changes
     bgView.addSubview(starLabel!)
     
     descriptionLabel!.numberOfLines = 0

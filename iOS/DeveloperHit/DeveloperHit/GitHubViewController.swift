@@ -8,6 +8,15 @@
 
 import UIKit
 
+<<<<<<< Updated upstream
+=======
+enum ContributerError: Error {
+  case NOCONTRIBUTER
+  case NOAVATAR
+  case INVALIDURL
+}
+
+>>>>>>> Stashed changes
 @objcMembers class GitHubViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, XMLParserDelegate {
 
   let trendTableView = UITableView()
@@ -40,7 +49,10 @@ import UIKit
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+<<<<<<< Updated upstream
     
+=======
+>>>>>>> Stashed changes
   }
   
   func initTrendTableView() {
@@ -58,12 +70,48 @@ import UIKit
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProjectTableViewCell.self), for: indexPath) as! ProjectTableViewCell
+<<<<<<< Updated upstream
     cell.starLabel?.text = "20"
+=======
+    cell.selectionStyle = .none
+    let project = projects[indexPath.row]
+    cell.rankLabel?.text = String(describing: indexPath.row + 1)
+    cell.repositoryLabel?.text = project.repositoryName
+    cell.userLabel?.text = "Owner: " + project.owner!
+    do {
+      guard let contributerData = project.contributor else {
+        throw ContributerError.NOCONTRIBUTER
+      }
+      if contributerData.isEmpty {
+        cell.titleImageView?.image = UIImage(named: "unknown")
+      } else {
+        guard let avatarData = contributerData[0].avatar else {
+          throw ContributerError.NOAVATAR
+        }
+        print(avatarData)
+        guard let urlData = URL(string: avatarData) else {
+          throw ContributerError.INVALIDURL
+        }
+        let imageData = try Data(contentsOf: urlData)
+        cell.titleImageView?.image = UIImage(data: imageData)
+      }
+    } catch {
+      cell.titleImageView?.image = UIImage(named: "unknown")
+    }
+    
+    cell.descriptionLabel?.text = project.descriptions
+    cell.starLabel?.text = "Star: " + String(describing: project.stars ?? -1)
+    
+>>>>>>> Stashed changes
     return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     print(indexPath.row)
+<<<<<<< Updated upstream
+=======
+//    TODO
+>>>>>>> Stashed changes
   }
   
   func requestGitHub() {
