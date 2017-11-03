@@ -78,7 +78,6 @@ enum ContributerError: Error {
         guard let avatarData = contributerData[0].avatar else {
           throw ContributerError.NOAVATAR
         }
-        print(avatarData)
         guard let urlData = URL(string: avatarData) else {
           throw ContributerError.INVALIDURL
         }
