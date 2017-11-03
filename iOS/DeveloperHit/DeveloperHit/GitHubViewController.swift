@@ -8,7 +8,9 @@
 
 import UIKit
 
-@objcMembers class GitHubViewController: UIViewController, XMLParserDelegate {
+@objcMembers class GitHubViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, XMLParserDelegate {
+
+  let trendTableView = UITableView()
   
   var eleName = String()
   var projects: [Project] = []
@@ -33,6 +35,35 @@ import UIKit
   override func viewDidLoad() {
     super.viewDidLoad()
     requestGitHub()
+    initTrendTableView()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+  }
+  
+  func initTrendTableView() {
+    trendTableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+    trendTableView.delegate = self
+    trendTableView.dataSource = self
+    trendTableView.rowHeight = 95
+    trendTableView.register(ProjectTableViewCell.self, forCellReuseIdentifier: String(describing: ProjectTableViewCell.self))
+    self.view.addSubview(trendTableView)
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return projects.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProjectTableViewCell.self), for: indexPath) as! ProjectTableViewCell
+    cell.starLabel?.text = "20"
+    return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print(indexPath.row)
   }
   
   func requestGitHub() {

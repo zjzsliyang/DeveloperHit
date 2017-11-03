@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F5C909A1FACD72F00020FF8 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C90991FACD72F00020FF8 /* ProjectTableViewCell.swift */; };
 		2FB380A91F9E54040099263D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB380A81F9E54040099263D /* AppDelegate.swift */; };
 		2FB380AE1F9E54040099263D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB380AC1F9E54040099263D /* Main.storyboard */; };
 		2FB380B01F9E54040099263D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB380AF1F9E54040099263D /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F5C90991FACD72F00020FF8 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		2FB380A51F9E54040099263D /* DeveloperHit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeveloperHit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB380A81F9E54040099263D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FB380AD1F9E54040099263D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				2FC68D231FA3842E00DCBC2B /* ServiceBase.swift */,
 				2FC68D211FA37E8700DCBC2B /* GitHubViewController.swift */,
 				2FC68D251FA384EB00DCBC2B /* GitHubModel.swift */,
+				2F5C90991FACD72F00020FF8 /* ProjectTableViewCell.swift */,
 				2FB380A81F9E54040099263D /* AppDelegate.swift */,
 				2FB380AF1F9E54040099263D /* Assets.xcassets */,
 				2FB380B11F9E54040099263D /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F5C909A1FACD72F00020FF8 /* ProjectTableViewCell.swift in Sources */,
 				2FC68D261FA384EB00DCBC2B /* GitHubModel.swift in Sources */,
 				2FB380A91F9E54040099263D /* AppDelegate.swift in Sources */,
 				2FC68D221FA37E8700DCBC2B /* GitHubViewController.swift in Sources */,
