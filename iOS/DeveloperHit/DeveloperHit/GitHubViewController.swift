@@ -8,15 +8,12 @@
 
 import UIKit
 
-<<<<<<< Updated upstream
-=======
 enum ContributerError: Error {
   case NOCONTRIBUTER
   case NOAVATAR
   case INVALIDURL
 }
 
->>>>>>> Stashed changes
 @objcMembers class GitHubViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, XMLParserDelegate {
 
   let trendTableView = UITableView()
@@ -49,10 +46,6 @@ enum ContributerError: Error {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-<<<<<<< Updated upstream
-    
-=======
->>>>>>> Stashed changes
   }
   
   func initTrendTableView() {
@@ -70,9 +63,6 @@ enum ContributerError: Error {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProjectTableViewCell.self), for: indexPath) as! ProjectTableViewCell
-<<<<<<< Updated upstream
-    cell.starLabel?.text = "20"
-=======
     cell.selectionStyle = .none
     let project = projects[indexPath.row]
     cell.rankLabel?.text = String(describing: indexPath.row + 1)
@@ -101,17 +91,12 @@ enum ContributerError: Error {
     
     cell.descriptionLabel?.text = project.descriptions
     cell.starLabel?.text = "Star: " + String(describing: project.stars ?? -1)
-    
->>>>>>> Stashed changes
     return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     print(indexPath.row)
-<<<<<<< Updated upstream
-=======
 //    TODO
->>>>>>> Stashed changes
   }
   
   func requestGitHub() {
