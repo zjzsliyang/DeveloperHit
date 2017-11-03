@@ -8,7 +8,7 @@
                 <xs:element name="display_name" type="xs:string"/>
                 <xs:element name="full_name" type="xs:string"/>
                 <xs:element name="dev_url" type="xs:string"/>
-                <xs:element name="avator" type="xs:string"/>
+                <xs:element name="avatar" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

@@ -13,7 +13,7 @@ type Developer struct {
 	DisplayName string `xml:"display_name"`
 	FullName    string `xml:"full_name"`
 	URL         string `xml:"dev_url"`
-	Avatar      string `xml:"avator"`
+	Avatar      string `xml:"avatar"`
 }
 
 type Project struct {
