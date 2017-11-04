@@ -16,6 +16,7 @@ class ProjectTableViewCell: UITableViewCell {
   var descriptionLabel: UILabel?
   var starLabel: UILabel?
   var titleImageView: UIImageView?
+  var languageLabel: UILabel?
   
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -39,41 +40,40 @@ class ProjectTableViewCell: UITableViewCell {
     contentView.addSubview(bgView)
     
     rankLabel = UILabel(frame: CGRect(x: preWidth, y: orginY, width: rankWidth, height: repositoryLabelHeight))
+    rankLabel!.textColor = UIColor(red: 0.24, green: 0.51, blue: 0.78, alpha: 1)
+    rankLabel!.textAlignment = .center
     bgView.addSubview(rankLabel!)
     
     repositoryLabel = UILabel(frame: CGRect(x: preWidth + rankWidth + sufRankWidth, y: orginY, width: repositoryLabelWidth, height: repositoryLabelHeight))
+    repositoryLabel!.textColor = UIColor(red: 0.24, green: 0.51, blue: 0.78, alpha: 1)
     bgView.addSubview(repositoryLabel!)
     
     userLabel = UILabel(frame: CGRect(x: preWidth + rankWidth + sufRankWidth, y: orginY + repositoryLabelHeight + heightSpace, width: userLabelWidth, height: repositoryLabelHeight))
+    userLabel!.font = UIFont.systemFont(ofSize: 12)
+    userLabel!.textColor = UIColor(red: 0.54, green: 0.54, blue: 0.54, alpha: 1)
     bgView.addSubview(userLabel!)
     
     descriptionLabel = UILabel(frame: CGRect(x: preWidth + rankWidth + sufRankWidth, y: orginY + repositoryLabelHeight * 2 + heightSpace * 2, width: labelWidth, height: repositoryLabelHeight * 2))
+    descriptionLabel!.numberOfLines = 0
+    descriptionLabel!.font = UIFont.systemFont(ofSize: 13)
     bgView.addSubview(descriptionLabel!)
     
     titleImageView = UIImageView(frame: CGRect(x: preWidth + (rankWidth - imageViewWidth) / 2, y: orginY + 30 + heightSpace, width: imageViewWidth, height: imageViewWidth))
-    bgView.addSubview(titleImageView!)
-    
-    starLabel = UILabel(frame: CGRect(x: preWidth + rankWidth + sufRankWidth + repositoryLabelWidth, y: orginY, width: 75, height: repositoryLabelHeight))
-    bgView.addSubview(starLabel!)
-    
-    descriptionLabel!.numberOfLines = 0
-    descriptionLabel!.font = UIFont.systemFont(ofSize: 13)
-    
-    repositoryLabel!.textColor = UIColor(red: 0.24, green: 0.51, blue: 0.78, alpha: 1)
-    
-    userLabel!.font = UIFont.systemFont(ofSize: 12)
-    userLabel!.textColor = UIColor(red: 0.54, green: 0.54, blue: 0.54, alpha: 1)
-    
-    starLabel!.font = UIFont.systemFont(ofSize: 12)
-    starLabel!.textColor = UIColor(red: 0.54, green: 0.54, blue: 0.54, alpha: 1)
-    
-    rankLabel!.textColor = UIColor(red: 0.24, green: 0.51, blue: 0.78, alpha: 1)
-    rankLabel!.textAlignment = .center
-    
     titleImageView!.layer.cornerRadius = 5
     titleImageView!.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1).cgColor
     titleImageView!.layer.borderWidth = 0.2
     titleImageView!.layer.masksToBounds = true
+    bgView.addSubview(titleImageView!)
+    
+    starLabel = UILabel(frame: CGRect(x: preWidth + rankWidth + sufRankWidth + repositoryLabelWidth, y: orginY, width: 75, height: repositoryLabelHeight))
+    starLabel!.font = UIFont.systemFont(ofSize: 12)
+    starLabel!.textColor = UIColor(red: 0.54, green: 0.54, blue: 0.54, alpha: 1)
+    bgView.addSubview(starLabel!)
+    
+    languageLabel = UILabel(frame: CGRect(x: preWidth + rankWidth + sufRankWidth + repositoryLabelWidth, y: orginY + repositoryLabelHeight + heightSpace, width: userLabelWidth, height: repositoryLabelHeight))
+    languageLabel!.font = UIFont.systemFont(ofSize: 12)
+    languageLabel?.textColor = UIColor(red: 0.54, green: 0.54, blue: 0.54, alpha: 1)
+    bgView.addSubview(languageLabel!)
   }
   
   required init?(coder aDecoder: NSCoder) {

@@ -87,7 +87,12 @@ enum ContributerError: Error {
     } catch {
       cell.titleImageView?.image = UIImage(named: "unknown")
     }
-    
+    cell.languageLabel?.text = project.language
+    if project.language == "" {
+      cell.languageLabel?.textColor = UIColor(red: 0.54, green: 0.54, blue: 0.54, alpha: 1)
+    } else {
+      cell.languageLabel?.textColor = UIColor(hexString: LanguageColor[project.language!] ?? "#8a8a8a")
+    }
     cell.descriptionLabel?.text = project.descriptions
     cell.starLabel?.text = "Star: " + String(describing: project.stars ?? -1)
     return cell
