@@ -42,10 +42,8 @@ enum ContributerError: Error {
     super.viewDidLoad()
     requestGitHub()
     initTrendTableView()
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
+    
+    navigationController?.navigationBar.topItem?.title = "GitHub Trending"
   }
   
   func initTrendTableView() {
