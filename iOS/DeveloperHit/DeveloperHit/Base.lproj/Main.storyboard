@@ -12,7 +12,7 @@
         <!--Zhihu-->
         <scene sceneID="aeR-7z-2tK">
             <objects>
-                <viewController title="Zhihu" id="bSB-Ny-csc" sceneMemberID="viewController">
+                <viewController title="Zhihu" id="bSB-Ny-csc" customClass="ZhihuViewController" customModule="DeveloperHit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n4G-mk-l50">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l20-Yw-8Jv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1484" y="533"/>
+            <point key="canvasLocation" x="1599" y="533"/>
         </scene>
         <!--GitHub-->
         <scene sceneID="LY8-Tz-JNI">
@@ -64,7 +64,7 @@
         <!--V2EX-->
         <scene sceneID="4Jv-4w-INx">
             <objects>
-                <viewController title="V2EX" id="9v1-8O-1tz" sceneMemberID="viewController">
+                <viewController title="V2EX" id="9v1-8O-1tz" customClass="V2EXViewController" customModule="DeveloperHit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BQx-VK-mpm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,7 @@
         <!--Gank-->
         <scene sceneID="jha-Cb-J1n">
             <objects>
-                <viewController title="Gank" id="rpR-aa-ho4" sceneMemberID="viewController">
+                <viewController title="Gank" id="rpR-aa-ho4" customClass="GankViewController" customModule="DeveloperHit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RgN-Zu-etB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -60,6 +60,9 @@ under construction...
 
 ### iOS
 
-##### Screenshot
+#### Screenshot
 
-![iOS-GitHub](res/iOS-GitHub.png)
+| ![iOS-GitHub](res/iOS-GitHub.png) |      |
+| --------------------------------- | ---- |
+|                                   |      |
+
