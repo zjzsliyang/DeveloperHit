@@ -11,6 +11,6 @@ import Foundation
 public class ServiceBase {
   public static let GitHubUrl = "http://115.159.1.222:8000/github"
   public static let ZhihuUrl = "http://115.159.1.222:3001/topic"
-  public static let V2EXUrl = ""
-  public static let GankUrl = ""
+  public static let V2EXUrl = "https://www.v2ex.com/api/topics/hot.json"
+  public static let GankUrl = "http://gank.io/api/day/2017/08/07"
 }

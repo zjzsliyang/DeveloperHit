@@ -16,6 +16,7 @@
 		2FB380AE1F9E54040099263D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB380AC1F9E54040099263D /* Main.storyboard */; };
 		2FB380B01F9E54040099263D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB380AF1F9E54040099263D /* Assets.xcassets */; };
 		2FB380B31F9E54040099263D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB380B11F9E54040099263D /* LaunchScreen.storyboard */; };
+		2FB7D5021FADEA81006BEB1F /* ZhihuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB7D5011FADEA81006BEB1F /* ZhihuModel.swift */; };
 		2FC68D221FA37E8700DCBC2B /* GitHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC68D211FA37E8700DCBC2B /* GitHubViewController.swift */; };
 		2FC68D241FA3842E00DCBC2B /* ServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC68D231FA3842E00DCBC2B /* ServiceBase.swift */; };
 		2FC68D261FA384EB00DCBC2B /* GitHubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC68D251FA384EB00DCBC2B /* GitHubModel.swift */; };
@@ -33,6 +34,7 @@
 		2FB380AF1F9E54040099263D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FB380B21F9E54040099263D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FB380B41F9E54040099263D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FB7D5011FADEA81006BEB1F /* ZhihuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhihuModel.swift; sourceTree = "<group>"; };
 		2FC68D211FA37E8700DCBC2B /* GitHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubViewController.swift; sourceTree = "<group>"; };
 		2FC68D231FA3842E00DCBC2B /* ServiceBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBase.swift; sourceTree = "<group>"; };
 		2FC68D251FA384EB00DCBC2B /* GitHubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubModel.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				2FC68D211FA37E8700DCBC2B /* GitHubViewController.swift */,
 				2FC68D251FA384EB00DCBC2B /* GitHubModel.swift */,
 				2F6F75CF1FADD26100E369C4 /* ZhihuViewController.swift */,
+				2FB7D5011FADEA81006BEB1F /* ZhihuModel.swift */,
 				2F6F75D11FADD2A700E369C4 /* V2EXViewController.swift */,
 				2F6F75D31FADD2B100E369C4 /* GankViewController.swift */,
 				2F5C90991FACD72F00020FF8 /* ProjectTableViewCell.swift */,
@@ -159,6 +162,7 @@
 			files = (
 				2F6F75D41FADD2B100E369C4 /* GankViewController.swift in Sources */,
 				2F5C909A1FACD72F00020FF8 /* ProjectTableViewCell.swift in Sources */,
+				2FB7D5021FADEA81006BEB1F /* ZhihuModel.swift in Sources */,
 				2FC68D261FA384EB00DCBC2B /* GitHubModel.swift in Sources */,
 				2FB380A91F9E54040099263D /* AppDelegate.swift in Sources */,
 				2F126EC71FAD45B300D415EF /* LanguageColor.swift in Sources */,
