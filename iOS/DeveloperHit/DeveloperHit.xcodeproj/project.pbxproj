@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2F126EC71FAD45B300D415EF /* LanguageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F126EC61FAD45B300D415EF /* LanguageColor.swift */; };
 		2F5C909A1FACD72F00020FF8 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C90991FACD72F00020FF8 /* ProjectTableViewCell.swift */; };
+		2F66B3411FAEF7BF00A986E8 /* V2EXModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66B3401FAEF7BF00A986E8 /* V2EXModel.swift */; };
+		2F66B3431FAEFB9B00A986E8 /* GankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66B3421FAEFB9B00A986E8 /* GankModel.swift */; };
 		2F6F75D01FADD26100E369C4 /* ZhihuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F75CF1FADD26100E369C4 /* ZhihuViewController.swift */; };
 		2F6F75D21FADD2A700E369C4 /* V2EXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F75D11FADD2A700E369C4 /* V2EXViewController.swift */; };
 		2F6F75D41FADD2B100E369C4 /* GankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F75D31FADD2B100E369C4 /* GankViewController.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		2F126EC61FAD45B300D415EF /* LanguageColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageColor.swift; sourceTree = "<group>"; };
 		2F5C90991FACD72F00020FF8 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		2F66B3401FAEF7BF00A986E8 /* V2EXModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2EXModel.swift; sourceTree = "<group>"; };
+		2F66B3421FAEFB9B00A986E8 /* GankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GankModel.swift; sourceTree = "<group>"; };
 		2F6F75CF1FADD26100E369C4 /* ZhihuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhihuViewController.swift; sourceTree = "<group>"; };
 		2F6F75D11FADD2A700E369C4 /* V2EXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2EXViewController.swift; sourceTree = "<group>"; };
 		2F6F75D31FADD2B100E369C4 /* GankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GankViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +81,9 @@
 				2F6F75CF1FADD26100E369C4 /* ZhihuViewController.swift */,
 				2FB7D5011FADEA81006BEB1F /* ZhihuModel.swift */,
 				2F6F75D11FADD2A700E369C4 /* V2EXViewController.swift */,
+				2F66B3401FAEF7BF00A986E8 /* V2EXModel.swift */,
 				2F6F75D31FADD2B100E369C4 /* GankViewController.swift */,
+				2F66B3421FAEFB9B00A986E8 /* GankModel.swift */,
 				2F5C90991FACD72F00020FF8 /* ProjectTableViewCell.swift */,
 				2F126EC61FAD45B300D415EF /* LanguageColor.swift */,
 				2FB380A81F9E54040099263D /* AppDelegate.swift */,
@@ -163,6 +169,8 @@
 				2F6F75D41FADD2B100E369C4 /* GankViewController.swift in Sources */,
 				2F5C909A1FACD72F00020FF8 /* ProjectTableViewCell.swift in Sources */,
 				2FB7D5021FADEA81006BEB1F /* ZhihuModel.swift in Sources */,
+				2F66B3411FAEF7BF00A986E8 /* V2EXModel.swift in Sources */,
+				2F66B3431FAEFB9B00A986E8 /* GankModel.swift in Sources */,
 				2FC68D261FA384EB00DCBC2B /* GitHubModel.swift in Sources */,
 				2FB380A91F9E54040099263D /* AppDelegate.swift in Sources */,
 				2F126EC71FAD45B300D415EF /* LanguageColor.swift in Sources */,
