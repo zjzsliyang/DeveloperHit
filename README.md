@@ -56,13 +56,16 @@ It will run in the ``3001`` port with the url  ``/topic``.
 
 ## Frontend
 
-under construction...
+### Web
+
+Repo:  https://github.com/lisirrx/vue-DeveloperHit
 
 ### iOS
 
 #### Screenshot
 
-| ![iOS-GitHub](res/iOS-GitHub.png) |      |
-| --------------------------------- | ---- |
-|                                   |      |
+![iOS-GitHub](res/iOS-GitHub.png)
 
+### Android
+
+under construction
