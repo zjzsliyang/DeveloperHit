@@ -25,7 +25,10 @@ class GankViewController: UIViewController, UITableViewDelegate, UITableViewData
   }
   
   func initGankTableView() {
-    
+    gankTableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+    gankTableView.delegate = self
+    gankTableView.dataSource = self
+    self.view.addSubview(gankTableView)
   }
   
   func requestGank() {
@@ -43,11 +46,22 @@ class GankViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
   }
   
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    return categorys[section]
+  }
+  
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return categorys.count
+  }
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    <#code#>
+    return ganks[section].count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    <#code#>
+    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "GankTableViewCell")
+    cell.textLabel?.text = ganks[indexPath.section][indexPath.row].who
+    cell.detailTextLabel?.text = ganks[indexPath.section][indexPath.row].desc
+    return cell
   }
 }
