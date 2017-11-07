@@ -54,6 +54,12 @@ class V2EXViewController: UIViewController, UITableViewDelegate, UITableViewData
     return cell
   }
   
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let webView = WebKitViewController()
+    webView.webView.loadRequest(URLRequest(url: URL(string: topics[indexPath.row].url ?? "https://v2ex.com/")!))
+    self.navigationController?.pushViewController(webView, animated: true)
+  }
+  
   func requestV2EX() {
     Alamofire.request(ServiceBase.V2EXUrl).responseJSON { (response) in
       let json = JSON(data: response.data!)

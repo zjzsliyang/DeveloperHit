@@ -58,7 +58,7 @@ It will run in the ``3001`` port with the url  ``/topic``.
 
 ### Web
 
-Repo:  https://github.com/lisirrx/vue-DeveloperHit
+Repo:  https://github.com/lisirrx/DevelopmentHit
 
 ### iOS
 

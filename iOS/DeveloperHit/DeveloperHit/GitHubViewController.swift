@@ -97,8 +97,9 @@ enum ContributerError: Error {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print(indexPath.row)
-//    TODO
+    let webView = WebKitViewController()
+    webView.webView.loadRequest(URLRequest(url: URL(string: projects[indexPath.row].url ?? "https://github.com/")!))
+    self.navigationController?.pushViewController(webView, animated: true)
   }
   
   func requestGitHub() {

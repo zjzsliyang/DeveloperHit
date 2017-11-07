@@ -58,6 +58,12 @@ class GankViewController: UIViewController, UITableViewDelegate, UITableViewData
     return ganks[section].count
   }
   
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let webView = WebKitViewController()
+    webView.webView.loadRequest(URLRequest(url: URL(string: ganks[indexPath.section][indexPath.row].url ?? "https://gank.io/")!))
+    self.navigationController?.pushViewController(webView, animated: true)
+  }
+  
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "GankTableViewCell")
     cell.textLabel?.text = ganks[indexPath.section][indexPath.row].who

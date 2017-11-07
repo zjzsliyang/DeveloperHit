@@ -61,8 +61,10 @@ import UIKit
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print(indexPath.row)
-//    TODO
+    let webView = WebKitViewController()
+    print(questions[indexPath.row].url ?? "https://zhihu.com/")
+    webView.webView.loadRequest(URLRequest(url: URL(string: questions[indexPath.row].url ?? "https://zhihu.com/")!))
+    self.navigationController?.pushViewController(webView, animated: true)
   }
   
   func requestZHihu() {
@@ -108,8 +110,13 @@ import UIKit
       eleName = "commentCount"
     case "answer_url":
       eleName = "answerUrl"
-    case "user_url":
-      eleName = "userUrl"
+    case "url":
+      if urlCnt == 0 {
+        urlCnt += 1
+      } else {
+        eleName = "userUrl"
+        urlCnt = 0
+      }
     case "name":
       if nameCnt == 0 {
         topic = str
