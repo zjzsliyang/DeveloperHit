@@ -65,7 +65,7 @@ enum ContributerError: Error {
     let project = projects[indexPath.row]
     cell.rankLabel?.text = String(describing: indexPath.row + 1)
     cell.repositoryLabel?.text = project.repositoryName
-    cell.userLabel?.text = "Owner: " + project.owner!
+    cell.userLabel?.text = "👩‍💻 " + project.owner!
     do {
       guard let contributerData = project.contributor else {
         throw ContributerError.NOCONTRIBUTER
@@ -92,7 +92,7 @@ enum ContributerError: Error {
       cell.languageLabel?.textColor = UIColor(hexString: LanguageColor[project.language!] ?? "#8a8a8a")
     }
     cell.descriptionLabel?.text = project.descriptions
-    cell.starLabel?.text = "Star: " + String(describing: project.stars ?? -1)
+    cell.starLabel?.text = "⭐️ " + String(describing: project.stars ?? -1)
     return cell
   }
   

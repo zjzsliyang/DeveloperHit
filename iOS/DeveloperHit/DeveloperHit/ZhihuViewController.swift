@@ -50,19 +50,19 @@ import UIKit
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "TopicTableViewCell")
     let question = questions[indexPath.row]
-    cell.textLabel?.text = question.user![0].name
-    cell.detailTextLabel?.text = question.title_
-    let upvoteLabel = UILabel(frame: CGRect(x: cell.frame.maxX - 100, y: 10, width: 100, height: 20))
-    upvoteLabel.textColor = UIColor(red: 0.24, green: 0.51, blue: 0.78, alpha: 1)
+    cell.textLabel?.text = question.title_
+    cell.textLabel?.font = UIFont.systemFont(ofSize: 13)
+    cell.textLabel?.textColor = UIColor(red: 0.24, green: 0.51, blue: 0.78, alpha: 1)
+    cell.detailTextLabel?.text = question.user![0].name
+    let upvoteLabel = UILabel(frame: CGRect(x: cell.frame.maxX - 70, y: 25, width: 100, height: 20))
     upvoteLabel.font = UIFont.systemFont(ofSize: 12)
-    upvoteLabel.text = "upvote: " + question.upvotes!
+    upvoteLabel.text = "👍 " + question.upvotes!
     cell.addSubview(upvoteLabel)
     return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let webView = WebKitViewController()
-    print(questions[indexPath.row].url ?? "https://zhihu.com/")
     webView.webView.loadRequest(URLRequest(url: URL(string: questions[indexPath.row].url ?? "https://zhihu.com/")!))
     self.navigationController?.pushViewController(webView, animated: true)
   }

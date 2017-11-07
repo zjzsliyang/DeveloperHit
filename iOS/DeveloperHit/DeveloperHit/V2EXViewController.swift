@@ -42,6 +42,8 @@ class V2EXViewController: UIViewController, UITableViewDelegate, UITableViewData
     let topic = topics[indexPath.row]
     cell.rankLabel?.text = String(describing: indexPath.row + 1)
     cell.repositoryLabel?.text = topic.title
+    cell.repositoryLabel?.frame = CGRect(x: 65, y: 5, width: 280, height: 20)
+    cell.repositoryLabel?.font = UIFont.systemFont(ofSize: 14)
     cell.userLabel?.text = topic.member?.userName
     do {
       let imageData = try Data(contentsOf: URL(string: "https:" + (topic.member?.avatar)!)!)
@@ -50,7 +52,7 @@ class V2EXViewController: UIViewController, UITableViewDelegate, UITableViewData
       cell.titleImageView?.image = UIImage(named: "unknown")
     }
     cell.descriptionLabel?.text = topic.content
-    cell.starLabel?.text = "replies: " + String(describing: topic.replies!)
+    cell.languageLabel?.text = "👉 " + String(describing: topic.replies!)
     return cell
   }
   

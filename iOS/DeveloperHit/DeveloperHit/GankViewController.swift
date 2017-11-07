@@ -66,8 +66,17 @@ class GankViewController: UIViewController, UITableViewDelegate, UITableViewData
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "GankTableViewCell")
-    cell.textLabel?.text = ganks[indexPath.section][indexPath.row].who
-    cell.detailTextLabel?.text = ganks[indexPath.section][indexPath.row].desc
+    cell.textLabel?.text = ganks[indexPath.section][indexPath.row].desc
+    cell.textLabel?.font = UIFont.systemFont(ofSize: 14)
+    cell.textLabel?.textColor = UIColor(red: 0.24, green: 0.51, blue: 0.78, alpha: 1)
+    cell.detailTextLabel?.text = ganks[indexPath.section][indexPath.row].who
+    let urlLabel = UILabel()
+    urlLabel.backgroundColor = UIColor(hexString: "#EFF0F1")
+    urlLabel.textColor = .black
+    urlLabel.font = UIFont.systemFont(ofSize: 10)
+    urlLabel.text = String(describing: URL(string: ganks[indexPath.section][indexPath.row].url!)?.host ?? "")
+    urlLabel.frame = CGRect(x: 180, y: 30, width: urlLabel.intrinsicContentSize.width, height: urlLabel.intrinsicContentSize.height)
+    cell.addSubview(urlLabel)
     return cell
   }
 }
