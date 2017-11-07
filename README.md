@@ -64,7 +64,12 @@ Repo:  https://github.com/lisirrx/DevelopmentHit
 
 #### Screenshot
 
-![iOS-GitHub](res/iOS-GitHub.png)
+| ![iOS-GitHub](res/iOS-GitHub.png)     | ![iOS-Zhihu](res/iOS-Zhihu.png)       |
+| ------------------------------------- | ------------------------------------- |
+| ![iOS-V2EX](res/iOS-V2EX.png)         | ![iOS-Gank](res/iOS-Gank.png)         |
+| ![iOS-detail_1](res/iOS-detail_1.png) | ![iOS-detail_2](res/iOS-detail_2.png) |
+
+
 
 ### Android
 
