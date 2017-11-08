@@ -37,9 +37,17 @@ go get github.com/zjzsliyang/go-trending
 cd DeveloperHit/Backend
 go build
 ./Backend
+# to run in the background
+# nohup ./Backend &
 ```
 
 It will run in the ``8000`` port with the url  ``/github``.
+
+#### Implement
+
+First, to access GitHub data in ``https://github.com/trending``, I reference a web crawler repo and [fork](https://github.com/zjzsliyang/go-trending) it to fix bugs GitHub new trending page via Go. In the backend part, I create a corresponding data structure to store the GitHub data like ``Developer``, ``Project``, ``Projects``. You can find XML Schema in [github.xsd](https://github.com/zjzsliyang/DeveloperHit/blob/master/Backend/github.xsd).
+
+One shortcoming is that after getting the request from frontend to crawler takes too long, and cache in frontend or distributed crawler is in the plan.
 
 ### Zhihu
 
@@ -62,6 +70,15 @@ Repo:  https://github.com/lisirrx/DevelopmentHit
 
 ### iOS
 
+#### How to Run
+
+[CocoaPods](http://cocoapods.org/) is a dependency manager for Cocoa projects. Run following command to install dependency.
+
+```shell
+cd DeveloperHit/iOS/DeveloperHit
+pod install
+```
+
 #### Screenshot
 
 | ![iOS-GitHub](res/iOS-GitHub.png)     | ![iOS-Zhihu](res/iOS-Zhihu.png)       |
@@ -69,7 +86,9 @@ Repo:  https://github.com/lisirrx/DevelopmentHit
 | ![iOS-V2EX](res/iOS-V2EX.png)         | ![iOS-Gank](res/iOS-Gank.png)         |
 | ![iOS-detail_1](res/iOS-detail_1.png) | ![iOS-detail_2](res/iOS-detail_2.png) |
 
+#### Implement
 
+iOS part use MVVM architecture to decouple views and view models. Thus, to adapt an information aggregation demand, I use table view design widely.
 
 ### Android
 
