@@ -109,7 +109,7 @@ It will run in the ``3001`` port with the url  ``/topic``.
 
 ### Web
 
-Repo:  https://github.com/lisirrx/DeveloperHit
+Repo:  https://github.com/lisirrx/Vue-DeveloperHit
 
 ### iOS
 
