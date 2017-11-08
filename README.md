@@ -92,4 +92,4 @@ iOS part use MVVM architecture to decouple views and view models. Thus, to adapt
 
 ### Android
 
-under construction
+Repo: https://github.com/tjluozhongjin/DeveloperHit
